@@ -13,10 +13,7 @@ const expandedForm = (num) => {
       if (numArr[i]==0) {continue}
       extArr.push(numArr[i]*(10**(numArr.length-i-1)))
     }
-    console.log(numArr, extArr )
-    let output = extArr[0].toString();
-    for (i=1; i<extArr.length; i++) {
-      output = output+" + "+extArr[i]
-    }
-    return output;
+    console.log(numArr, extArr)
+    return extArr.join(" + ");
    }
+   
