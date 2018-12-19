@@ -33,10 +33,10 @@ const encrypt = (text, n) => {
           p2+=encoded[j-1]
           }
         encoded = p1+p2;
-        if (text.length % 2 !== 0) {
-          encoded = encoded + text[text.length-1]
-        }
       }
+      if (text.length % 2 !== 0) {
+        encoded = encoded + text[text.length-1]
+      } 
      return encoded;
     }
     
@@ -55,13 +55,13 @@ const encrypt = (text, n) => {
         let p1 = "";
         // let p2 = ""; 
        for (j=0; j<encryptedText.length/2; j++) {
-         p1 = p1 + decoded[j+Math.floor(encryptedText.length/2)] + decoded[j]
+             p1 = p1 + decoded[j+Math.floor(encryptedText.length/2)] + decoded[j]
+           }
+          decoded = p1;
          }
-         decoded = p1;
         if (encryptedText.length % 2 !== 0) {
-          decoded = decoded.substring(0, encryptedText.length)
-        }
-         }
+            decoded = decoded.substring(0, encryptedText.length)
+          }   
       return decoded;
       }
     }
