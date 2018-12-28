@@ -19,4 +19,4 @@ const makePassword = (phrase) =>{
     })
     console.log(wordArr, finArr);
     return finArr.join('')
-   }
+   }  
