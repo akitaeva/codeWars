@@ -11,7 +11,7 @@ const cakes = (recipe, available) => {
     amountRatios.push(avail/recipe[ing]);
   }
   const valArr = amountRatios.filter(amt => amt !== 0);
-  return Math.floor(Math.min.apply(Math, valArr));
+  return Math.floor(Math.min(...valArr));
 }
 
 // must return 2
